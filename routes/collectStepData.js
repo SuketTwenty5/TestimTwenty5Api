@@ -90,7 +90,7 @@ router.post('/collect-step-data', (req, res) => {
     step['testdata'] = { ...testdata, ...testimVariablesGet(req.body) };
     exportsTest._steps.push(step);
 
-    res.json({ message: 'Step data collected successfully', step: step });
+    res.json({ message: 'Step data collected successfully', step: step, steps: exportsTest._steps });
 });
 
 module.exports = router;

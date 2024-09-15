@@ -26,10 +26,12 @@ app.use((req, res, next) => {
 // Import the get-messages route
 const getMessagesRoute = require('./routes/getMessages');
 const collectStepDataRoutes = require('./routes/collectStepData');
+const testResultsRoute = require('./routes/testResults');
 
 // Use the get-messages route without any prefix
 app.use('/', getMessagesRoute);
 app.use('/', collectStepDataRoutes);
+app.use('/', testResultsRoute);
 
 // Start the server
 app.listen(port, () => {
